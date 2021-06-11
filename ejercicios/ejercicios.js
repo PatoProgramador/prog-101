@@ -66,33 +66,38 @@ const ejercicio5 = () => {
     console.log("  *   * ");
     console.log(" *     * ");
     console.log("*********");
-}
+};
 
-let responseMenu = parseInt(
-    prompt("¿Que ejercicio quieres ver?")
-);
 
-switch (responseMenu) {
-    case 1:
-        ejercicio1();
-        break;
+const menu = () => {
+    let responseMenu = parseInt(
+        prompt("¿Que ejercicio quieres ver?")
+    );
+    switch (responseMenu) {
+        case 1:
+            ejercicio1();
+            break;
+            
+        case 2:
+            ejercicio2();
+            break;
         
-    case 2:
-        ejercicio2();
-        break;
+        case 3:
+            ejercicio3();
+            break;
     
-    case 3:
-        ejercicio3();
-        break;
-
-    case 4:
-        ejercicio4();
-        break;
-    case 5:
-        ejercicio5();
-        break;
-
-    default:
-        console.log("Ejercicio incorrecto");
-        break;
+        case 4:
+            ejercicio4();
+            break;
+        case 5:
+            ejercicio5();
+            break;
+    
+        default:
+            console.log("Ejercicio incorrecto");
+            break;
+    }
 }
+
+const buttonStart = document.getElementById("button-start");
+buttonStart.addEventListener("click", menu);
